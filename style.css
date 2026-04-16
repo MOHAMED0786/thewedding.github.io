@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: #fdfdfd;
+    text-align: center;
+}
+
+/* الظرف */
+.envelope-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.envelope {
+    width: 350px;
+    height: 250px;
+    background: #f8e6e6;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 1s;
+}
+
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f2cfcf;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+    transition: 1s;
+}
+
+.design {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stamp {
+    font-size: 60px;
+}
+
+.design h2 {
+    margin-top: 10px;
+}
+
+/* فتح الظرف */
+.open .flap {
+    transform: rotatey(980deg);
+}
+
+/* الكارت */
+.main {
+    display: none;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #f2dcdc;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* زخرفة الجوانب */
+.card::before, .card::after {
+    content: "🌸🌿🌸";
+    display: block;
+    margin: 10px 0;
+}
+
+.names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    color: #d4af37;
+}
+
+.text {
+    margin: 10px 0;
+}
+
+.info {
+    margin: 8px 0;
+}
+
+a {
+    color: #d4af37;
+    text-decoration: none;
+}
+.card-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
